@@ -59,7 +59,7 @@ export class Like extends plugin {
         // 写入配置文件
         fs.writeFileSync(autoLikeDir, JSON.stringify(autoLikeConfig, null, 2));
 
-        return this.reply('已开启自动点赞', false, { at: true });
+        return this.reply('已开启自动点赞', true);
     }
 
     async closeAutoLike(e) {
@@ -79,7 +79,7 @@ export class Like extends plugin {
         // 写入配置文件
         fs.writeFileSync(autoLikeDir, JSON.stringify(autoLikeConfig, null, 2));
 
-        return this.reply('已关闭自动点赞', false, { at: true });
+        return this.reply('已关闭自动点赞', true);
     }
 
     async openPush(e) {
@@ -99,7 +99,7 @@ export class Like extends plugin {
         // 写入配置文件
         fs.writeFileSync(autoLikeDir, JSON.stringify(autoLikeConfig, null, 2));
 
-        return this.reply('已开启点赞通知', false, { at: true });
+        return this.reply('已开启点赞通知', true);
     }
 
     async closePush(e) {
@@ -119,7 +119,7 @@ export class Like extends plugin {
         // 写入配置文件
         fs.writeFileSync(autoLikeDir, JSON.stringify(autoLikeConfig, null, 2));
 
-        return this.reply('已关闭点赞通知', false, { at: true });
+        return this.reply('已关闭点赞通知', true);
     }
 
     async autoLike() {
